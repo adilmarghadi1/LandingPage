@@ -1,0 +1,612 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: linear-gradient(#14ECEC, #120047);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-menu {
+    display: flex;
+
+}
+
+.nav-item {
+    list-style: none;
+    padding:10px;
+    margin-right: 50px;
+    margin-top: 20px;
+  
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    opacity: 0.9;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.nav-logo {
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 210px;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+
+.bar {
+    display: flex;
+    width: 25px;
+    height: 3px;
+    margin:5px auto;
+    transition: al 0.3s ease-in;
+    background-color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width:760px)
+{
+    .nav-menu {
+        flex-direction: column;
+        background-color: rgb(197, 39, 39);
+        width: 100%;
+        height: 100vh;
+        left: -100%;
+        text-align: center;
+        position: fixed;
+        transition: all 0.3s ease-in;
+    }
+
+    .hamburger{
+         position: fixed;
+        display: block;
+        right: 0;
+        margin-top:-30px;
+        cursor: pointer
+    }
+
+    .nav-bar {
+        justify-content: space-between;
+    }
+    .nav-item {
+        margin:1rem 0;
+        justify-content: center;
+        padding-top:50px;
+    }
+     
+
+    .nav-link {
+        color: rgb(252, 248, 241);
+    }
+
+    .nav-item {
+        margin:1.5rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .bar {
+        margin-right: 15px;
+    }
+
+    .hamburger.active .bar:nth-child(2)
+    {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+  
+
+    
+}
+
+
+
+.section1 {
+     
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    margin:0 auto;
+      
+
+}
+
+ .box1 {
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+     padding-top: 70px;
+     width:100%;
+     background-color: #E7816B;
+     height: auto;
+ }
+
+ .box1 h1 {
+     color:white;
+     font-size: 3em;
+     padding-bottom: 40px;
+     width:90%;
+     margin:0 auto;
+
+ }
+
+ .box1 p {
+     width:90%;
+     margin:0 auto;
+     line-height: 1.7;
+     color: white;
+
+ }
+
+ .box2   img{
+     border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+    height: 60vh;
+    width:100%;
+ }
+
+ @media screen and (max-width:1150px)
+ {
+        .section1 {
+            grid-template-columns:repeat(1, 1fr);
+        }
+
+
+        .box1 h1 {
+            text-align: center;
+        }
+
+        .box1 p {
+            text-align: center;
+        }
+
+        .box1 {
+            border-top-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+        }
+
+        .box2 img{
+            border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+        }
+
+ }
+
+ @media screen and (max-width:450px)
+ {
+     .box2 img {
+         height: 25vh;
+     }
+
+     
+ }
+
+
+ 
+.section2 {
+    display: grid;
+    width:62%;
+    margin:0 auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.box3 {
+
+     padding:20px;
+    background-color: #fdf3f0;
+    border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+}
+.box3 h1 {
+    color: #E7816B;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 3em;
+    padding-left: 30px;
+
+}
+
+.box3 p {
+    line-height: 1.8;
+    padding-left: 30px;
+    opacity: 0.7;
+
+}
+
+
+.box4 {
+    background-image: url("https://clement-baradel-designo.vercel.app/assets/about/desktop/image-world-class-talent.jpg");
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+    height: auto;
+    width:100%;
+}
+
+@media screen and (max-width:1045px)
+{
+    .section2 {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .box3 {
+        border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+    }
+    .box3 h1 {
+        text-align: center;
+    }
+
+    .box3 p {
+        text-align: center;
+    }
+
+    .box4 {
+        background-image: url("https://clement-baradel-designo.vercel.app/assets/about/mobile/image-world-class-talent.jpg");
+        width: 65%;
+        margin:0 auto;
+        border-top-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+
+    }
+
+    .box3 h1 {
+        margin-top: 0px;
+    }
+    
+}
+
+
+@media screen and (max-width:500px)
+{
+    .box4 {
+        width:90%;
+        margin:0 auto;
+
+    }
+}
+@media screen and (max-width:680px) {
+    .box3 {
+        margin-top: -30px;
+    }
+}
+
+
+@media screen and (max-width:571px) {
+    .box3 {
+        margin-top: -80px;
+    }
+}
+
+@media screen and (max-width:454px) {
+    .box3 {
+        margin-top: -180px;
+    }
+}
+
+
+@media screen and (max-width:454px) {
+    .box3 {
+        margin-top: -220px;
+    }
+}
+
+
+@media screen and (max-width:374px) {
+    .box3 {
+        margin-top: -290px;
+    }
+}
+
+
+
+@media screen and (max-width:336px) {
+    .box3 {
+        margin-top: -300px;
+    }
+}
+
+
+
+.section3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+
+.box5 {
+    flex: 1 1 150px;
+    margin:20px;
+    
+}
+
+.box5 h1 {
+    text-align: center;
+    font-size: 1.7em;
+    opacity: 0.8;
+    padding-top: 16px;
+    padding-bottom: 25px;
+}
+
+.box5 img {
+    margin:0 auto;
+    display: block;
+    border-radius: 50%;
+    background-color: #fdf3f0;
+}
+
+
+.center1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box5 a {
+    padding: 15px 17px;
+    background-color: #E7816B;
+    border-radius: 12px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.box5 a:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+
+
+.section4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    height: 90vh;
+    margin:0 auto;
+}
+
+ 
+ .box6 {
+     padding:20px;
+     background-color: #fdf3f0;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+     margin-top: 90px;
+ }
+
+ .box6 h1{
+     color:#E7816B;
+     padding-top: 40px;
+     padding-bottom: 20px;
+     font-size: 3em;
+     padding-left: 30px;
+ }
+
+
+.box6 p{ 
+    line-height: 2;
+    padding-left: 30px;
+    opacity: 0.7;
+}
+
+
+
+.box7 {
+    margin-top: 90px;
+    border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://clement-baradel-designo.vercel.app/assets/about/desktop/image-real-deal.jpg")
+}
+
+
+@media screen and (max-width:1000px)
+{
+    .section4 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 100%;
+        height: auto;
+        margin:0 auto;
+    }
+
+    .box6 {
+        border-top-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+    }
+
+    .box7 {
+        margin-top: 5px;
+        height:450px;
+        border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+    }
+}
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section10 .box10 {
+    width: 70%;
+    height: auto;
+    background-color: #E7816B;
+    margin:0 auto;
+    border-radius: 25px;
+}
+.box10 {
+    padding: 10px;
+}
+.box10 h1 {
+    font-size: 2.9em;
+    color:white;
+    padding: 60px;
+}
+
+.box10 p {
+    padding-left: 30px;
+    color:white;
+    font-size: 1em;
+    font-weight: 400;
+    text-align-last: start;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.inline1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.box10 button{
+    float: right;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.1em;
+    margin-top: -80px;
+    cursor: pointer;
+}
+
+.box10 button:hover {
+    background-color: #FFAD9B;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1260px)
+{
+    .box10 {
+        text-align: center;
+    }
+
+    .box10 p {
+        text-align: center;
+    }
+
+    .box10 button {
+        text-align: center;
+    }
+}
+
+
+.footer1 {
+    background-color: #1D1C1E;
+}
+ 
+.footer1 img {
+    margin-top: 30px;
+    color: white;
+     
+}
+
+.nav-menu2 {
+        border-bottom: 3px solid #2a2a2b;
+
+}
+.footer1 .nav-menu {
+     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+
+ 
+.nav-link1 {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-link1:hover {
+border-bottom: 2px solid rgb(238, 158, 158);;
+
+    color: rgb(238, 158, 158);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.footer2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+
+}
+
+.footer2 .second {
+
+    flex: 1 1 150px;
+    padding-top: 20px;
+    margin:40px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #878687;
+}
+
+
+
+.second2 {
+    flex-wrap: wrap;
+    padding:12px;
+}
+
+.second img {
+    padding-left:10px;
+}
+
+
+.second img:hover {
+    cursor: pointer;
+}
+
+ 
